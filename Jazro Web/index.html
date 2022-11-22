@@ -1,0 +1,263 @@
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <head>
+        <title>
+            EduBlock Website
+        </title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--CSS CODE-->
+        <style>
+
+        html
+        {
+        scroll-behavior: smooth;
+        }
+
+        .header
+        {
+            background-image: url('/Users/hakim/Desktop/Barang Hakim/Pic Jazro/doodle.jpeg');
+            background-size: 20%;
+            background-color: rgba(218, 218, 218, 0.7);
+            background-blend-mode: lighten;
+            width: 100%;
+            height: 13%;
+            position: absolute;
+            overflow:visible;
+        }
+
+        .type
+        {
+            min-width: 7%;
+            height: 87%;
+            background-color: rgb(33, 77, 55);
+            position: absolute;
+            top: 13%;
+            left: 0%;      
+            overflow: hidden;
+        }
+
+        .blockCoding
+        {
+            min-width: 10%;
+            height: 87%;
+            background-color: rgb(69, 158, 84);
+            position: absolute;
+            top: 13%;
+            left: 7%;
+            overflow: hidden;
+        }
+
+        .compiler
+        {
+            width: 93%;
+            height: 87%;
+            background-color: rgb(84, 165, 110);
+            position: absolute;
+            top: 13%;
+            left: 7%;
+            overflow: hidden;
+        }
+
+        .logo
+        {
+            transform: translateX(20px);
+        }
+
+        /*Hamburger Menu Right*/
+
+        .dropbtn 
+        {
+            background-color: #29a9e1;
+            color: white;
+            padding: 16px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+
+        }
+
+        .dropbtn:hover, .dropbtn:focus 
+        {
+          background-color: #2980B9;
+          color: #000;
+        }
+
+        .dropdown 
+        {
+          position: relative;
+          display: inline-block;
+          float: right;
+          top: 28px;
+          right: 20px;
+        }
+
+        .dropdown-content 
+        {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          right:0px;
+          text-align: right;
+          border-radius: 5px;
+        }
+
+        .dropdown-content a 
+        {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown a:hover 
+        {
+            background-color: #ddd;
+        }
+
+        .show 
+        {
+            display: block;
+        }
+
+
+/*Nav bar on the right*/
+        ul {
+            list-style-type: none;
+            margin-top: 200px;
+            padding: 10px 10px;
+            width: 100px;
+            background-color: #f1f1f1;
+            float: right;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            background-image: url('/Users/hakim/Desktop/Barang Hakim/Pic Jazro/test1.jpeg');
+            background-size: 190px;
+            background-color: rgba(204, 204, 204, 0.361);
+            background-blend-mode: lighten;
+
+        }
+
+li a 
+{
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover 
+{
+  background-color: #98afd8;
+  color: rgb(0, 0, 0);
+}
+/*End of nav bar on the right*/
+
+        </style>
+   <!--END OF CSS CODE-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+$(document).ready(function(){
+  $(".blockCoding").click(function(){
+    $(this).hide();
+  });
+});
+
+    </script>
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+
+    function myFunction() 
+    {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+
+    window.onclick = function(event) 
+    {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    </head>
+
+        <body style="background-color:rgb(159, 50, 50);">
+            
+
+        <div class="simulation">
+
+        </div>
+
+        <div class="type">
+            <P>type</P>
+        </div>
+        
+        <div class="compiler">
+            <ul>
+                <li><a href="#"><img src="/Users/hakim/Desktop/Barang Hakim/Pic Jazro/simulation logo.png" style="height: 40px; width: 40px;"></a></li>
+                <li><a href="#news"><b>&ensp;<&nbsp;></b></a></li>
+                <li><a href="#contact"><img src="/Users/hakim/Desktop/Barang Hakim/Pic Jazro/play icon.png" style="height: 40px; width: 40px;"></a></li>
+                <li><a href="#"><img src="/Users/hakim/Desktop/Barang Hakim/Pic Jazro/pause icon.png" style="height: 30px; width: 30px; padding-left: 10px;"></a></li>
+              </ul>
+
+        </div>
+
+        <div class="header">
+
+            <div class="logo">
+                <a href="https://www.jazro.com.my/">
+                <img src="/Users/hakim/Desktop/Barang Hakim/Pic Jazro/logo.png" alt="logo" style="height: 90px; transform: translate(30px, 5px);"></a>
+                <a href="https://www.jazro.com.my/">
+                <img src="/Users/hakim/Desktop/Barang Hakim/Pic Jazro/text.png" alt="logo" style="height: 30px; transform: translate(30px, 5px);">
+                </a>
+            </div>
+
+    </div>
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">=</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="###">Home</a>
+          <a href="https://portal.jazro.com.my/">Learning Portal</a>
+          <a href="https://www.jazro.com.my/about-us">About Us</a>
+        </div>
+      </div>
+
+
+        <div class="blockCoding">
+            <p style="padding-left: 10px;">BlockCoding</p>
+        </div>
+
+        <div class="addBar">
+        </div>
+
+        </div>
+
+
+        </body>
+<html>

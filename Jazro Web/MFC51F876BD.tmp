@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Workspace Test</title>
+  <script src="blockDefinition.js"></script>
+  <script src="GeneratorSubs.js"></script>
+  <script src="js/blockly_compressed.js"></script>
+  <script src="js/blocks_compressed.js"></script>
+  <script src="js/javascript_compressed.js"></script>
+  <script src="js/en.js"></script>
+</head>
+<body>
+	
+  <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+	
+  <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+
+  <category name="Move" colour="#5ba55b">
+    <block type="move_1">
+      <field name="move">move_forward</field>
+      <field name="speed">slow</field>
+    </block>
+    <block type="move_2">
+      <field name="move_2">move_forward</field>
+      <field name="speed">slow</field>
+    </block>
+    <block type="move_3"></block>
+  </category>
+  <category name="Show" colour="#5b67a5">
+    <block type="show_1">
+      <field name="note">note_1</field>
+      <field name="beat">beat_1</field>
+    </block>
+  </category>
+  <category name="Sense" colour="#a55b80">
+    <block type="sense_1"></block>
+  </category>
+  <category name="Control" colour="#5b80a5">
+    <block type="control_1"></block>
+    <block type="control_2">
+      <field name="loop">loop_1</field>
+    </block>
+    <block type="control_3"></block>
+    <block type="control_4"></block>
+  </category>
+  <category name="Math" colour="#5b67a5">
+    <block type="math_number">
+      <field name="NUM">0</field>
+    </block>
+    <block type="math_arithmetic">
+      <field name="OP">ADD</field>
+      <value name="A">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="B">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_single">
+      <field name="OP">ROOT</field>
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">9</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_trig">
+      <field name="OP">SIN</field>
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">45</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_constant">
+      <field name="CONSTANT">PI</field>
+    </block>
+    <block type="math_number_property">
+      <mutation divisor_input="false"></mutation>
+      <field name="PROPERTY">EVEN</field>
+      <value name="NUMBER_TO_CHECK">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_round">
+      <field name="OP">ROUND</field>
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">3.1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_on_list">
+      <mutation op="SUM"></mutation>
+      <field name="OP">SUM</field>
+    </block>
+    <block type="math_modulo">
+      <value name="DIVIDEND">
+        <shadow type="math_number">
+          <field name="NUM">64</field>
+        </shadow>
+      </value>
+      <value name="DIVISOR">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_constrain">
+      <value name="VALUE">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="LOW">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="HIGH">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_random_int">
+      <value name="FROM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_random_float"></block>
+  </category>
+	  
+  <script>
+    var demoWorkspace = Blockly.inject('blocklyDiv',
+        {media: 'media/', toolbox: document.getElementById('toolbox')});
+
+  </script>
+  
+</xml>
+</body>
+</html>

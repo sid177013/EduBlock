@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!--Src Blockly-->
+  <script src="js/blockly_compressed.js"></script>
+  <script src="js/blocks_compressed.js"></script>
+  <script src="js/javascript_compressed.js"></script>
+  <script src="js/en.js"></script>
+  <script src="theme.js"></script>
+  <script src="blockDefinition.js"></script>
+
+
   <!--CSS CODE-->
   <style>
     html {
@@ -16,6 +27,7 @@
     }
 
     .header {
+      background-image: url('/Users/hakim/Desktop/Barang Hakim/Pic Jazro/doodle.jpeg');
       background-image: url('/Pic Jazro/doodle.jpeg');
       background-size: 20%;
       background-color: rgba(218, 218, 218, 0.7);
@@ -126,12 +138,36 @@
       float: right;
       border-radius: 10px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      background-image: url('/Users/hakim/Desktop/Barang Hakim/Pic Jazro/test1.jpeg');
+
       background-image: url('/Pic Jazro/test1.jpeg');
       background-size: 190px;
       background-color: rgba(204, 204, 204, 0.361);
       background-blend-mode: lighten;
 
     }
+
+    li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the link color on hover */
+    li a:hover {
+      background-color: #98afd8;
+      color: rgb(0, 0, 0);
+    }
+
+    /* Blockly Div */
+    #blocklyDiv {
+      float: bottom;
+      height: 87%;
+      width: 100%;
+      position: absolute;
+      top: 13%;
+      overflow: hidden;
 
     li a {
       display: block;
@@ -191,6 +227,11 @@
 <body style="background-color:rgb(159, 50, 50);">
 
 
+</head>
+
+<body style="background-color:rgb(159, 50, 50);">
+
+
   <div class="simulation">
 
   </div>
@@ -208,15 +249,183 @@
 
     <div class="logo">
       <a href="https://www.jazro.com.my/">
+
+        <img src="/Users/hakim/Desktop/Barang Hakim/Pic Jazro/logo.png" alt="logo"
+          style="height: 90px; transform: translate(30px, 5px);"></a>
+      <a href="https://www.jazro.com.my/">
+        <img src="/Users/hakim/Desktop/Barang Hakim/Pic Jazro/text.png" alt="logo"
+
         <img src="/Pic Jazro/logo.png" alt="logo"
           style="height: 90px; transform: translate(30px, 5px);"></a>
       <a href="https://www.jazro.com.my/">
         <img src="/Pic Jazro/text.png" alt="logo"
+
           style="height: 30px; transform: translate(30px, 5px);">
       </a>
     </div>
 
   </div>
+
+
+  <!--Blockly Section-->
+  <div id="blocklyDiv"></div>
+
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">=</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="###">Home</a>
+      <a href="https://portal.jazro.com.my/">Learning Portal</a>
+      <a href="https://www.jazro.com.my/about-us">About Us</a>
+    </div>
+  </div>
+
+  <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+
+    <category name="Start" categorystyle="start_category">
+      <block type="start" />
+    </category>
+    <category name="Move" colour="#5ba55b">
+      <block type="move_1">
+        <field name="move">move_forward</field>
+        <field name="speed">slow</field>
+      </block>
+      <block type="move_2">
+        <field name="move_2">move_forward</field>
+        <value name="NAME">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <field name="speed">slow</field>
+      </block>
+      <block type="move_3"></block>
+    </category>
+    <category name="Show" colour="#9fa55b">
+      <block type="show_1">
+        <field name="note">note_1</field>
+        <field name="beat">beat_1</field>
+      </block>
+    </category>
+    <category name="Sense" colour="#a55b80">
+      <block type="sense_1"></block>
+    </category>
+    <category name="Control" colour="#5b80a5">
+      <block type="control_1"></block>
+      <block type="control_2">
+        <field name="loop">loop_1</field>
+      </block>
+      <block type="control_3"></block>
+      <block type="control_4"></block>
+    </category>
+    <category name="Math" colour="#5b67a5">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+      <block type="math_arithmetic">
+        <field name="OP">ADD</field>
+        <value name="A">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="B">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_single">
+        <field name="OP">ROOT</field>
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">9</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_trig">
+        <field name="OP">SIN</field>
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">45</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_constant">
+        <field name="CONSTANT">PI</field>
+      </block>
+      <block type="math_number_property">
+        <mutation divisor_input="false" />
+        <field name="PROPERTY">EVEN</field>
+        <value name="NUMBER_TO_CHECK">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_round">
+        <field name="OP">ROUND</field>
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">3.1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_on_list">
+        <mutation op="SUM" />
+        <field name="OP">SUM</field>
+      </block>
+      <block type="math_modulo">
+        <value name="DIVIDEND">
+          <shadow type="math_number">
+            <field name="NUM">64</field>
+          </shadow>
+        </value>
+        <value name="DIVISOR">
+          <shadow type="math_number">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_constrain">
+        <value name="VALUE">
+          <shadow type="math_number">
+            <field name="NUM">50</field>
+          </shadow>
+        </value>
+        <value name="LOW">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="HIGH">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_random_int">
+        <value name="FROM">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_random_float" />
+    </category>
+
+    <script>
+      var demoWorkspace = Blockly.inject('blocklyDiv',
+        { media: 'media/', toolbox: document.getElementById('toolbox'), theme: Blockly.Themes.Jazro });
+    </script>
+  </xml>
+</body>
+<html>
+
 
   <div class="dropdown">
     <button onclick="myFunction()" class="dropbtn">=</button>
